@@ -598,25 +598,38 @@ function Sand(promise, replacement) {
 function InfoStylingRules() {
     var infoStylingRules = {
         ph: {
+            intro: "pH is the scale used to measure the acidity of water.",
             gradientColors: ["#f00", ["#ff0", "good-min"], "#0f0", ["#ff0", "good-max"], "#f00"]
         },
         dissolved_oxygen: {
+            intro: "Dissolved Oxygen is a measure of how much oxygen is dissolved in water.it is a key indicator of water quality.",
             gradientColors: ["#0f0", ["#ff0", "good-min"], "#ff0", "#f00"]
         },
         temperature: {
+            intro: "Arsenic is a naturally occuring element in the Earth's crust.",
             gradientColors: ["#aaa", ["#aaa", "cool"], "#aaa", "#aaa", ["#aaa", "warm"]]
         },
         turbidity: {
+            intro: "Turbidity is a measure of the water’s lack of clarity.",
             gradientColors: ["#0f0", ["#ff0", "good-min"], ["#f00", "good-max"], "#f00"]
         },
         biochemical_oxygen_demand: {
+            intro: "Coliform Bacteria are rod-shaped bacteria found in the intestinal tract of humans and other animals. Its presence in water indicates fecal contamination and can cause diarrhea and other dysenteric symptoms.",
             gradientColors: ["#ff0", ["#0f0", "good-min"], ["#ff0", "good-max"], "#f00"]
         },
         nitrate: {
+            intro: "Nitrate is an essential nutrient for aquatic plants and animals and is the form in which plants utilise nitrogen.",
             gradientColors: ["#f00", ["#0f0", "good-min"], ["#ff0", "good-max"], "#f00"]
         },
-        phosphate:{
+        phosphate: {
+            intro: "Phosphorus is essential for plant growth and metabolic reactions in animals and plants.",
             gradientColors: ["#f00", ["#0f0", "good-min"], ["#ff0", "good-max"], "#f00"]
+        },
+        benthic_macroinvertebrates: {
+            intro: "Benthic macroinvertebrates are animals without backbones, that are visible with the naked eye, living on the bottoms of streams, river, lakes, and ponds."
+        },
+        coliform_bacteria: {
+            intro: "Coliform Bacteria are rod-shaped bacteria found in the intestinal tract of humans and other animals. Its presence in water indicates fecal contamination and can cause diarrhea and other dysenteric symptoms."
         }
     };
 
@@ -685,6 +698,8 @@ function VisualizationFunctions() {
                     }
                     )[0];
 
+            $(this).closest(".scale-container").attr("title", scaleStylingRules.intro);
+
             $(this).append(function() {
 
                 return (paramsTable[scale] && Number(paramsTable[scale]) >= unimin && Number(paramsTable[scale]) <= unimax) ? $("<div class='pointer agg'></div>").cssByFunction(function() {
@@ -741,6 +756,8 @@ function VisualizationFunctions() {
                     }
                     )[0];
 
+            $(this).closest(".scale-container").attr("title", scaleStylingRules.intro);
+
             $(this).append(function() {
 
                 return (paramsTable[scale] && Number(paramsTable[scale]) >= unimin && Number(paramsTable[scale]) <= unimax) ? $("<div class='pointer agg'></div>").cssByFunction(function() {
@@ -796,6 +813,8 @@ function VisualizationFunctions() {
                         return unimax - unimin;
                     }
                     )[0];
+
+            $(this).closest(".scale-container").attr("title", scaleStylingRules.intro);
 
             //scaleRange = 50;
 
@@ -854,6 +873,8 @@ function VisualizationFunctions() {
                     }
                     )[0];
 
+            $(this).closest(".scale-container").attr("title", scaleStylingRules.intro);
+
             $(this).append(function() {
 
                 return (paramsTable[scale] && Number(paramsTable[scale]) >= unimin && Number(paramsTable[scale]) <= unimax) ? $("<div class='pointer agg'></div>").cssByFunction(function() {
@@ -908,6 +929,8 @@ function VisualizationFunctions() {
                         return unimax - unimin;
                     }
                     )[0];
+
+            $(this).closest(".scale-container").attr("title", scaleStylingRules.intro);
 
             $(this).append(function() {
 
@@ -965,6 +988,8 @@ function VisualizationFunctions() {
                         return unimax - unimin;
                     }
                     )[0];
+
+            $(this).closest(".scale-container").attr("title", scaleStylingRules.intro);
 
             $(this).append(function() {
 
@@ -1040,6 +1065,8 @@ function VisualizationFunctions() {
                     }
                     )[0];
 
+            $(this).closest(".scale-container").attr("title", scaleStylingRules.intro);
+
             $(this).append(function() {
 
                 return (paramsTable[scale] && Number(paramsTable[scale]) >= unimin && Number(paramsTable[scale]) <= unimax) ? $("<div class='pointer agg'></div>").cssByFunction(function() {
@@ -1083,6 +1110,9 @@ function VisualizationFunctions() {
         coliform_bacteria: function(scaleStylingRules, paramsTable) {
             var scale = "coliform_bacteria";
             var vizbox = $(this).closest(".scale-container");
+
+            vizbox.attr("title", scaleStylingRules.intro);
+
             vizbox.find(".scale").remove();
             vizbox.append(function() {
                 if(!(typeof paramsTable[scale]==="string" || typeof paramsTable[scale]==="number")) {
@@ -1103,6 +1133,9 @@ function VisualizationFunctions() {
         benthic_macroinvertebrates: function(scaleStylingRules, paramsTable) {
             var scale = "benthic_macroinvertebrates";
             var vizbox = $(this).closest(".scale-container");
+
+            vizbox.attr("title", scaleStylingRules.intro);
+
             vizbox.find(".scale").remove();
             vizbox.append(function() {
                 if(!(typeof paramsTable[scale]==="string" || typeof paramsTable[scale]==="number")) {

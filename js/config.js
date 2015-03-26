@@ -84,7 +84,7 @@ $.fn.functionByAttribute = function(fnDefnObj, scaleStylingRules, paramsTable) {
             fnDefnObj[$(this).closest(".scale-container").attr("type")].call(this, scaleStylingRules[$(this).closest(".scale-container").attr("type")], paramsTable);
         } catch (e) {
             console.log("function not defined for water parameter: " + $(this).closest("[type]").attr("type"));
-            console.log(e);
+            console.log(e.get_stack());
         }
     });
 };
