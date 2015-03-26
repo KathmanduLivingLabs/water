@@ -601,19 +601,22 @@ function InfoStylingRules() {
             gradientColors: ["#f00", ["#ff0", "good-min"], "#0f0", ["#ff0", "good-max"], "#f00"]
         },
         dissolved_oxygen: {
-            gradientColors: ["#330", ["#aa6", "good-min"], "#99f", "#aaf"]
+            gradientColors: ["#0f0", ["#ff0", "good-min"], "#ff0", "#f00"]
         },
         temperature: {
-            gradientColors: ["rgb(0,0,170)", ["rgb(153,153,255)", "cool"], "rgb(255,255,153)", "rgb(255,255,51)", ["rgb(255,0,0)", "warm"]]
+            gradientColors: ["#aaa", ["#aaa", "cool"], "#aaa", "#aaa", ["#aaa", "warm"]]
         },
         turbidity: {
-            gradientColors: ["rgba(180,180,255,0.6)", ["rgba(180,255,180,0.6)", "good-min"], ["rgba(255,180,180,0.6)", "good-max"], "rgba(100,50,25,1)"]
+            gradientColors: ["#0f0", ["#ff0", "good-min"], ["#f00", "good-max"], "#f00"]
         },
         biochemical_oxygen_demand: {
-            gradientColors: ["rgba(180,180,255,0.6)", ["rgba(180,255,180,0.6)", "good-min"], ["rgba(255,180,180,0.6)", "good-max"], "rgba(100,50,25,1)"]
+            gradientColors: ["#ff0", ["#0f0", "good-min"], ["#ff0", "good-max"], "#f00"]
         },
         nitrate: {
-            gradientColors: ["rgba(180,180,255,0.6)", ["rgba(180,255,180,0.6)", "good-min"], ["rgba(255,180,180,0.6)", "good-max"], "rgba(100,50,25,1)"]
+            gradientColors: ["#f00", ["#0f0", "good-min"], ["#ff0", "good-max"], "#f00"]
+        },
+        phosphate:{
+            gradientColors: ["#f00", ["#0f0", "good-min"], ["#ff0", "good-max"], "#f00"]
         }
     };
 
@@ -691,7 +694,7 @@ function VisualizationFunctions() {
                             return scaleSize * paramsTable[scale] / scaleRange;
                         }
                     };
-                }) : $("<div class='msg reading-erroneous'>Not Available</div>");
+                }) : function(context){ 	$(context).addClass("not-available"); 	return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
             });
 
             $(this).cssByFunction(function() {
@@ -747,7 +750,7 @@ function VisualizationFunctions() {
                             return scaleSize * paramsTable[scale] / scaleRange;
                         }
                     };
-                }) : $("<div class='msg reading-erroneous'>Not Available</div>");
+                }) : function(context){ 	$(context).addClass("not-available"); 	return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
             });
 
             $(this).cssByFunction(function() {
@@ -805,7 +808,7 @@ function VisualizationFunctions() {
                             return scaleSize * paramsTable[scale] / scaleRange;
                         }
                     };
-                }) : $("<div class='msg reading-erroneous'>Not Available</div>");
+                }) : function(context){ 	$(context).addClass("not-available"); 	return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
             });
 
             $(this).cssByFunction(function() {
@@ -860,7 +863,7 @@ function VisualizationFunctions() {
                             return scaleSize * paramsTable[scale] / scaleRange;
                         }
                     };
-                }) : $("<div class='msg reading-erroneous'>Not Available</div>");
+                }) : function(context){ 	$(context).addClass("not-available"); 	return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
             });
 
             $(this).cssByFunction(function() {
@@ -915,7 +918,7 @@ function VisualizationFunctions() {
                             return scaleSize * paramsTable[scale] / scaleRange;
                         }
                     };
-                }) : $("<div class='msg reading-erroneous'>Not Available</div>");
+                }) : function(context){ 	$(context).addClass("not-available"); 	return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
             });
 
             $(this).cssByFunction(function() {
@@ -972,7 +975,7 @@ function VisualizationFunctions() {
                             return scaleSize * paramsTable[scale] / scaleRange;
                         }
                     };
-                }) : $("<div class='msg reading-erroneous'>Not Available</div>");
+                }) : function(context){ 	$(context).addClass("not-available"); 	return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
             });
 
             $(this).cssByFunction(function() {
@@ -1046,7 +1049,7 @@ function VisualizationFunctions() {
                             return scaleSize * paramsTable[scale] / scaleRange;
                         }
                     };
-                }) : $("<div class='msg reading-erroneous'>Not Available</div>");
+                }) : function(context){ 	$(context).addClass("not-available"); 	return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
             });
 
             $(this).cssByFunction(function() {
@@ -1082,10 +1085,10 @@ function VisualizationFunctions() {
             var vizbox = $(this).closest(".scale-container");
             vizbox.find(".scale").remove();
             vizbox.append(function() {
-                try {
-                    Object.keys(paramsTable[scale]).length;
+                if(!(typeof paramsTable[scale]==="string" || typeof paramsTable[scale]==="number")) {
+                    //Object.keys(paramsTable[scale]).length;
                     return "<div class='frequency-scale'>Present in " + paramsTable[scale].present + " out of " + Number(paramsTable[scale].present + paramsTable[scale].absent) + " samples.</div>";
-                }catch(e) {
+                }else {
                     switch (paramsTable[scale]) {
                         case "1":
                             return "<div class='frequency-scale'>Present</div>";
@@ -1102,10 +1105,10 @@ function VisualizationFunctions() {
             var vizbox = $(this).closest(".scale-container");
             vizbox.find(".scale").remove();
             vizbox.append(function() {
-                try {
-                    Object.keys(paramsTable[scale]).length;
+                if(!(typeof paramsTable[scale]==="string" || typeof paramsTable[scale]==="number")) {
+                    //Object.keys(paramsTable[scale]).length;
                     return "<div class='frequency-scale'>Present in " + paramsTable[scale].present + " out of " + Number(paramsTable[scale].present + paramsTable[scale].absent) + " samples.</div>";
-                }catch(e) {
+                }else {
                     switch (paramsTable[scale]) {
                         case "1":
                             return "<div class='frequency-scale'>Present</div>";

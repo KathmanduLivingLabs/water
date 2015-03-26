@@ -33,7 +33,7 @@ body *{
 }
 #loadScreen .loadScreenMessage{
     position:relative;
-    font-family: 'Myriad Pro', 'Verdana', 'sans-serif';
+    font-family: 'Open sans','Myriad Pro', 'Verdana', 'sans-serif';
     font-size:40pt;
     top:20%;
 }
@@ -153,7 +153,8 @@ a.disabled{
 .sandglass h4{
     /*margin:12px 0px 4px;*/
     /*margin-top:10px;*/
-    line-height:0pt;
+    line-height: 0pt;
+    line-height: 5pt;
     text-transform: capitalize;
     margin-bottom: 8pt;
     width:310px;
@@ -272,7 +273,7 @@ box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.8);
 }
 
 .panel *{
-    font-family: "Helvetica Neue", "Arial", "Helvetica", "sans-serif";
+    font-family: "Open sans", "Arial", "Helvetica", "sans-serif";
 }
 
 .panel.docked.bottom-left{
@@ -287,7 +288,7 @@ box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.8);
     margin:10px;
 }
 .panel>.info.contents h4{
-    max-width:220px;
+/*    max-width:220px;*/
 }
 #infoPanel>a.title{
     margin-left:10px;
@@ -555,4 +556,21 @@ div.testpoint-thumbnail{
     font-size: 16px;
     line-height: 20px;
     max-width: 310px;
+}
+
+.not-available{
+    background: #999999 !important;
+    color: #ff0000;
+}
+
+.count_schools{
+    display: none;
+}
+
+#infoPanel div[sort=2]{
+    margin-bottom: 12pt;
+}
+
+body{
+    font-family: "Open sans", "Verdana", sans-serif;
 }
