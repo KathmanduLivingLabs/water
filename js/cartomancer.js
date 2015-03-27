@@ -438,6 +438,14 @@ $(document).ready(function() {
                                 sandglass.setContent(popupContent.getPopupContent());
                                 sandglass.setContent(new sandglass.BalloonTurn());
 
+                                $(sandglass.getSandGlass()).find(".scale-container").each(function(index){
+                                    if($.inArray($(this).attr("type"),["benthic_macroinvertebrates","coliform_bacteria"])+1)return;
+									if($(this).attr("type")==="biochemical_oxygen_demand") $(this).find("h4.scale-name").text("BOD:");
+									if(!$(this).attr("parameter-value")) return;
+                                    if($(this).attr("unit")) $(this).find("h4").html($(this).find("h4").html()+" <p class='units'>"+Math.round(Number($(this).attr("parameter-value"))*10)/10+$(this).attr("unit") +"</p>");
+                                    else $(this).find("h4").html($(this).find("h4").html()+" <p class='units'>"+Math.round(Number($(this).attr("parameter-value"))*10)/10 +"</p>");
+                                });
+
                             });
                         });
 
@@ -598,7 +606,17 @@ $(document).ready(function() {
                                 sandglass.setContent(popupContent.getPopupContent());
                                 sandglass.setContent(new sandglass.BalloonTurn());
 
+                                $(sandglass.getSandGlass()).find(".scale-container").each(function(index){
+                                    if($.inArray($(this).attr("type"),["benthic_macroinvertebrates","coliform_bacteria"])+1)return;
+									if($(this).attr("type")==="biochemical_oxygen_demand") $(this).find("h4.scale-name").text("BOD:");
+									if(!$(this).attr("parameter-value")) return;
+                                    if($(this).attr("unit")) $(this).find("h4").html($(this).find("h4").html()+" <p class='units'>"+Math.round(Number($(this).attr("parameter-value"))*10)/10+$(this).attr("unit") +"</p>");
+                                    else $(this).find("h4").html($(this).find("h4").html()+" <p class='units'>"+Math.round(Number($(this).attr("parameter-value"))*10)/10 +"</p>");
+                                });
+
                             });
+
+
                         });
 
                     }
@@ -765,6 +783,14 @@ $(document).ready(function() {
                                         sandglass.setContent(popupContent.getPopupContent());
                                         sandglass.setContent(new sandglass.BalloonTurn());
 
+                                        $(sandglass.getSandGlass()).find(".scale-container").each(function(index){
+                                    if($.inArray($(this).attr("type"),["benthic_macroinvertebrates","coliform_bacteria"])+1)return;
+									if($(this).attr("type")==="biochemical_oxygen_demand") $(this).find("h4.scale-name").text("BOD:");
+									if(!$(this).attr("parameter-value")) return;
+                                    if($(this).attr("unit")) $(this).find("h4").html($(this).find("h4").html()+" <p class='units'>"+Math.round(Number($(this).attr("parameter-value"))*10)/10+$(this).attr("unit") +"</p>");
+                                    else $(this).find("h4").html($(this).find("h4").html()+" <p class='units'>"+Math.round(Number($(this).attr("parameter-value"))*10)/10 +"</p>");
+                                });
+
                                     });
                                 });
                             }
@@ -916,7 +942,7 @@ $(document).ready(function() {
 
                         //var nearbyCity = leafletPip.pointInLayer(e.latlng, context_this._layers[persistentLayerIDs.cities], true)[0].feature.properties.country;
 
-                        var sandglass = new SandGlass().setContent("<a class='title'>A testpoint <span style='text-transform:none;'>in</span> " + nearbyCity.replace(/_/g," ") + "</a>, <a class='title'>" + inCountry.replace(/_/g, " ") + "</a>");
+                        var sandglass = new SandGlass().setContent("<a class='title'>A testpoint <span style='text-transform:none;'>in</span> " + nearbyCity.replace(/_/g," ") + ",</a> <a class='title'>" + inCountry.replace(/_/g, " ") + "</a>");
 
                         //console.log(leafletPip.pointInLayer(e.latlng, context_this._layers[persistentLayerIDs.countries], true));
 
@@ -944,6 +970,16 @@ $(document).ready(function() {
 
                                 sandglass.setContent(popupContent.getPopupContent());
                                 sandglass.setContent(new sandglass.BalloonTurn());
+                                $($(sandglass.getSandGlass()).find("a.title")[0]).text(summaryTable.description);
+                                $($(sandglass.getSandGlass()).find("a.title")[1]).remove();
+
+                                $(sandglass.getSandGlass()).find(".scale-container").each(function(index){
+                                    if($.inArray($(this).attr("type"),["benthic_macroinvertebrates","coliform_bacteria"])+1)return;
+									if($(this).attr("type")==="biochemical_oxygen_demand") $(this).find("h4.scale-name").text("BOD:");
+									if(!$(this).attr("parameter-value")) return;
+                                    if($(this).attr("unit")) $(this).find("h4").html($(this).find("h4").html()+" <p class='units'>"+Math.round(Number($(this).attr("parameter-value"))*10)/10+$(this).attr("unit") +"</p>");
+                                    else $(this).find("h4").html($(this).find("h4").html()+" <p class='units'>"+Math.round(Number($(this).attr("parameter-value"))*10)/10 +"</p>");
+                                });
 
                             });
                         });
@@ -1237,6 +1273,14 @@ $(document).ready(function() {
 
                 sandglass.setContent(popupContent.getPopupContent());
 
+                $(sandglass.getSandGlass()).find(".scale-container").each(function(index){
+                                    if($.inArray($(this).attr("type"),["benthic_macroinvertebrates","coliform_bacteria"])+1)return;
+									if($(this).attr("type")==="biochemical_oxygen_demand") $(this).find("h4.scale-name").text("BOD:");
+									if(!$(this).attr("parameter-value")) return;
+                                    if($(this).attr("unit")) $(this).find("h4").html($(this).find("h4").html()+" <p class='units'>"+Math.round(Number($(this).attr("parameter-value"))*10)/10+$(this).attr("unit") +"</p>");
+                                    else $(this).find("h4").html($(this).find("h4").html()+" <p class='units'>"+Math.round(Number($(this).attr("parameter-value"))*10)/10 +"</p>");
+                                });
+
             });
         });
     };
@@ -1418,6 +1462,15 @@ $(document).ready(function() {
             popupContent.getConstructorState().done(function() {
 
                 sandglass.setContent(popupContent.getPopupContent());
+                $(sandglass.getSandGlass()).find("h4");
+
+                $(sandglass.getSandGlass()).find(".scale-container").each(function(index){
+                                    if($.inArray($(this).attr("type"),["benthic_macroinvertebrates","coliform_bacteria"])+1)return;
+									if($(this).attr("type")==="biochemical_oxygen_demand") $(this).find("h4.scale-name").text("BOD:");
+									if(!$(this).attr("parameter-value")) return;
+                                    if($(this).attr("unit")) $(this).find("h4").html($(this).find("h4").html()+" <p class='units'>"+Math.round(Number($(this).attr("parameter-value"))*10)/10+$(this).attr("unit") +"</p>");
+                                    else $(this).find("h4").html($(this).find("h4").html()+" <p class='units'>"+Math.round(Number($(this).attr("parameter-value"))*10)/10 +"</p>");
+                                });
 
             });
         });

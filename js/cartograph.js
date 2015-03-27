@@ -215,6 +215,8 @@ function InfoBox(initObj) {
     };
     this.setContent = function(content) {
         $(infoBox).find(".info.contents").html(content);
+        if($(infoBox).find(".scale").length)
+            console.log("yess!!");
     };
 
     this.bindTrigger = function(trigger) {
@@ -611,10 +613,10 @@ function InfoStylingRules() {
         },
         turbidity: {
             intro: "Turbidity is a measure of the water’s lack of clarity.",
-            gradientColors: ["#0f0", ["#ff0", "good-min"], ["#f00", "good-max"], "#f00"]
+            gradientColors: ["#0f0", ["#ff0", "good-max"], "#f00"]
         },
         biochemical_oxygen_demand: {
-            intro: "Coliform Bacteria are rod-shaped bacteria found in the intestinal tract of humans and other animals. Its presence in water indicates fecal contamination and can cause diarrhea and other dysenteric symptoms.",
+            intro: "BOD, or Biochemical Oxygen Demand is used as a measure of the degree of water pollution. BOD is the amount of oxygen required by aerobic micro-organisms to decompose the organic matter in a sample of water, such as that polluted by sewage.",
             gradientColors: ["#ff0", ["#0f0", "good-min"], ["#ff0", "good-max"], "#f00"]
         },
         nitrate: {
@@ -799,7 +801,7 @@ function VisualizationFunctions() {
         },
         temperature: function(scaleStylingRules, paramsTable) {
 
-            $(this).closest(".scale-container").find(".scale-name").text("arsenic:");
+            $(this).closest(".scale-container").find(".scale-name").text("arsenic");
 
             var scale = "temperature";
             var scaleSize = $(this).outerWidth();
@@ -861,6 +863,7 @@ function VisualizationFunctions() {
         biochemical_oxygen_demand: function(scaleStylingRules, paramsTable) {
 
             var scale = "biochemical_oxygen_demand";
+
             var scaleSize = $(this).outerWidth();
             var unimax, unimin;
             var scaleRange = $(this).closest(".scale-container")
@@ -1213,6 +1216,7 @@ function PopupContent(paramsTable, waterParams, paramsTableRows, onePage) {
      };*/
 
     var infoStylingRules = new InfoStylingRules().getInfoStylingRules();
+    $.extend(true, infoStylingRules, waterParams);
     /****/
     var fnDefnObj = new VisualizationFunctions().getFunctionDefinitionsObject();
 
@@ -1259,6 +1263,7 @@ function PopupContent(paramsTable, waterParams, paramsTableRows, onePage) {
                         for (var innerKey in waterParams[key]) {
                             attrPairs[innerKey] = waterParams[key][innerKey];
                         }
+                        if(typeof paramsTable[key]==="string" || typeof paramsTable[key]==="number")attrPairs["parameter-value"] = paramsTable[key];
 
                         return attrPairs;
 

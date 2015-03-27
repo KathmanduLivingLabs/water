@@ -18,8 +18,7 @@
 	},
 	"turbidity":{
 		"unit":"NTU",
-		"good-min":0,
-		"good-max":1,
+		"good-max":5,
         "min": 0,
         "max": 100
 	},
