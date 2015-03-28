@@ -243,15 +243,18 @@ box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.8);
     border: #656565 thin solid;
     /*box-shadow: 0px 0px 6px rgba(51, 51, 51, 0.6), 0px 0px 6px rgba(255, 255, 255, 0.8) inset;*/
     /*background-color: rgba(80,180,255,0.6);*/
-    box-shadow: 0px 0px 6px rgba(51, 51, 51, 0.6), 0px 0px 16px 12px rgba(80, 200, 255, 0.3) inset, 0px 0px 12px 4px rgba(255, 255, 255, 0.9) inset;
-    background: radial-gradient(rgba(90,220,255,0.9) 0%, rgba(15,70,100,0.96) 100%);
+/*    box-shadow: 0px 0px 6px rgba(51, 51, 51, 0.6), 0px 0px 16px 12px rgba(80, 200, 255, 0.3) inset, 0px 0px 12px 4px rgba(255, 255, 255, 0.9) inset;*/
+/*    background: radial-gradient(rgba(90,220,255,0.9) 0%, rgba(15,70,100,0.96) 100%);*/
 /*    outline: #aaaaaa thin solid;
     outline-offset: -16px;*/
 
 
-    box-shadow: 0px 0px 6px rgba(51, 51, 51, 0.6), 0px 0px 16px 12px rgba(255, 255, 255, 0.3) inset, 0px 0px 12px 4px rgba(255, 255, 255, 0.6) inset;
-    background: radial-gradient(rgba(255,255,255,1) 0%, rgba(180,180,180,1) 100%);
+/*    box-shadow: 0px 0px 6px rgba(51, 51, 51, 0.6), 0px 0px 16px 12px rgba(255, 255, 255, 0.3) inset, 0px 0px 12px 4px rgba(255, 255, 255, 0.6) inset;*/
+/*    background: radial-gradient(rgba(255,255,255,1) 0%, rgba(180,180,180,1) 100%);*/
     border: #999999 thin solid;
+    border-radius: 0px;
+    background-color: rgba(255,255,255,0.88);
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.4);
 
 
 /*    box-shadow: 0px 0px 6px rgba(51, 51, 51, 0.6);
@@ -308,7 +311,7 @@ box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.8);
     margin:10px;
 }
 .panel>.info.contents h4{
-/*    max-width:220px;*/
+/*    max-width:220px;*/website
 }
 #infoPanel>a.title{
     margin-left:10px;
@@ -625,12 +628,29 @@ p.units{
 .navbar-brand h1{
     background-color: rgba(103,176,209,0.6);
     background-color: rgba(150,150,150,0.6);
+    background-color: rgba(255,255,255,0.6);
     color: #000000;
     padding: 0px 10px;
+    outline: #999999 thin solid;
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.4);
 }
 .nav.navbar-nav{
     background-color: rgba(103,176,209,0.6);
     background-color: rgba(150,150,150,0.6);
+    background-color: rgba(255,255,255,0.6);
+    outline: #999999 thin solid;
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.4);
+}
+
+.top-nav-collapse .navbar-brand h1{
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+}
+.top-nav-collapse .nav.navbar-nav{
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
 }
 
 
