@@ -1,0 +1,58 @@
+{
+	"ph":{
+		"good-min":6.5,
+		"good-max":8.5,
+		"min":0,
+		"max":14
+	},
+	"dissolved_oxygen":{
+		"unit":"mg/Liter",
+		"good-min":5,
+		"min":0,
+		"max":8
+	},
+	"temperature":{
+		"unit":"Celsius",
+		"cool":15,
+		"warm":25
+	},
+	"turbidity":{
+		"unit":"NTU",
+		"good-min":0,
+		"good-max":1,
+        "min": 0,
+        "max": 100
+	},
+	"color":{
+	},
+	"coliform_bacteria":{
+		"nil":1,
+		"low":3,
+		"high":5
+	},
+	"biochemical_oxygen_demand":{
+		"unit":"mg/Liter",
+		"good-min":1,
+		"good-max":5
+	},
+	"nitrate":{
+		"unit":"mg/Liter",
+		"good-min":0.1,
+		"good-max":1,
+        "min": 0,
+        "max": 40
+	},
+	"phosphate":{
+		"unit":"mg/Liter",
+		"good-min":0.01,
+		"good-max":0.03,
+        "min": 0,
+        "max": 4
+	},
+	"benthic_macroinvertebrates":{
+		"nil":1,
+		"low":3,
+		"high":5
+	}
+}
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WATER Map</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <!--<link href="bootstrap-3.2.0-dist/css/bootstrap-theme.css" rel="stylesheet" />-->
+        <!--<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>-->
+
+        <link rel="stylesheet" href="css/leaflet.css" />
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet-pip.js"></script>
+
+        <script src="js/jquery-2.1.1.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+        <script type='text/javascript' src="js/jquery-ui.js"></script>
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,600,700,300' rel='stylesheet' type='text/css'>
+
+
+
+        <link rel="stylesheet" href="css/panelstyle.css"/>
+        <script type="text/javascript" src="js/config.js"></script>
+        <script type="text/javascript" src="js/data.js"></script>
+        <script type="text/javascript" src="js/cartomancer.js"></script>
+        <script type="text/javascript" src="js/cartograph.js"></script>
+
+        <!--[if IE 9]>
+        <script type="text/javascript" src="js/ie9Fix.js"></script>
+        <![endif]-->
+
+
+
+
+
+    </head>
+    <body>
+
+
+
+
+        <div id="map" class="col-xs-12 col-sm-6 col-lg-8">
+            3
+        </div>
+
+        <div id="splashScreen" class="panel float hidden leaflet-container">
+            <div class="container">
+                <div class="compare a">
+                    <div class="ui-objects">
+                        <select name="Country" class="country">
+                        </select>
+                        <select name="City" class="city">
+                        </select>
+                    </div>
+                    <div class="info-container sandglass-container"></div>
+                </div>
+                <div class="compare seperator column"></div>
+                <div class="compare b">
+                    <div class="ui-objects">
+                        <select name="Country" class="country">
+                        </select>
+                        <select name="City" class="city">
+                        </select>
+                    </div>
+                    <div class="info-container sandglass-container"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="infoPanel" class="panel docked right-docked hidden">
+            <h3>
+            </h3>
+            <div class="info-container">
+            </div>
+
+        </div>
+
+        <div id="freezeScreen"></div>
+
+
+    </body>
+</html>
