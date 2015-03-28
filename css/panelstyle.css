@@ -749,6 +749,13 @@ p.units{
     margin-left: 0px;
 }
 
+.navbar{
+    pointer-events: none;
+}
+.navbar .navbar-header, .navbar .navbar-nav{
+    pointer-events: all;
+}
+
 
 body{
     overflow-y: auto;
