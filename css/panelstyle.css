@@ -7,6 +7,10 @@
     letter-spacing: initial;
 }
 
+.intro{
+    background: #ffffff;
+}
+
 .intro .slogan{
     text-align: initial;
 }
@@ -617,9 +621,59 @@ p.units{
     bottom: 2366;
 }
 
-.about-text{
-    width: 50%;
+
+#about .img-circle{
+    border-radius: 0px;
+    margin-top: -12px;
 }
+
+
+#about .col-md-3{
+    width: 20%;
+    padding: 0px;
+}
+
+.team.boxed-grey{
+    background: #ffffff;
+}
+
+.about-text .team.boxed-grey{
+    background-color: #f9f9f9;
+}
+
+#about .about-text{
+    width: 80%;
+}
+
+#about i.fa{
+    display: none;
+}
+
+#about .inner{
+    font-weight: 400;
+}
+
+#about .about-text .inner{
+    text-align: left;
+}
+
+#about .col-lg-offset-2{
+/*    margin-left: 26.66666667%*/
+}
+
+.shift-up{
+    margin-top: -30px;
+}
+
+.shift-down{
+    margin-top: 30px;
+}
+
+.col-lg-offset-5{
+    height: 40px;
+    margin-top: -10px;
+}
+
 
 .item.description{
     margin-top: 18px;
