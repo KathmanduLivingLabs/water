@@ -336,12 +336,19 @@ box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.8);
 
 .panel .trigger.close{
     display:inline-block;
+/*
     padding: 6px;
     border-radius: 6px;
+*/
     background-color: rgba(150,150,150,0.6);
+/*    color: #ff0000;*/
     position: absolute;
     top:4px;
     right:4px;
+    font-weight: 600;
+    text-shadow: none;
+    padding: 4px;
+    opacity: 0.6;
 }
 .panel .trigger.close:hover, .panel .trigger.close:active{
 
@@ -515,6 +522,11 @@ panel .trigger.close .icon{
     font-size: 10pt;
     //line-height:0px;
     padding:4px;
+
+    border: #999999 thin solid;
+    border-radius: 0px;
+    background-color: rgba(255,255,255,0.88);
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.4);
 }
 .cartograph-control-button:hover{
     background-color: #f4f4f4;
@@ -621,6 +633,21 @@ p.units{
     bottom: 2366;
 }
 
+.leaflet-bar a:first-child, .leaflet-bar a:last-child, .leaflet-bar a{
+    border-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.leaflet-bar{
+    border-radius: 0px;
+    border: #999999 thin solid;
+    background-color: rgba(255,255,255,0.88);
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.4);
+}
+
 
 #about .img-circle{
     border-radius: 0px;
@@ -645,7 +672,7 @@ p.units{
     width: 80%;
 }
 
-#about i.fa{
+#about i.fa, #service i.fa{
     display: none;
 }
 
@@ -697,6 +724,7 @@ p.units{
 }
 
 .top-nav-collapse .navbar-brand h1{
+    color: #ffffff;
     background-color: transparent;
     outline: none;
     box-shadow: none;
@@ -705,6 +733,20 @@ p.units{
     background-color: transparent;
     outline: none;
     box-shadow: none;
+}
+
+.navbar-nav>li:last-child{
+    margin-left: 1px;
+}
+
+.navbar-nav>li{
+    outline: #999999 thin solid;
+}
+.top-nav-collapse .navbar-nav>li{
+    outline: none;
+}
+.top-nav-collapse .navbar-nav>li:last-child{
+    margin-left: 0px;
 }
 
 
