@@ -701,7 +701,7 @@ p.units{
 }
 
 #about .about-text .inner{
-    text-align: left;
+    text-align: justify;
 }
 
 #about .col-lg-offset-2{

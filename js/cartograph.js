@@ -6,7 +6,8 @@ function Map() {
                 /*,scrollWheelZoom: "center"*/
     });
     var osmTileLayer = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+//        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+        attribution: 'Base Map &copy; <a href="http://openstreetmap.org" target="_blank">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>, Supported by: <a href="http://nepal.usembassy.gov/" target="_blank">American Embassy <img src="img/team/1.jpg" height="30px"></a>, System Designed and Developed by: <a href="http://www.kathmandulivinglabs.org" target="_blank">Kathmandu Living Labs <img src="img/team/4.jpg" height="30px"/></a>',
         maxZoom: 18,
         minZoom: 4
     });
