@@ -845,6 +845,12 @@ p.units{
         margin-bottom: 91px;
     }
 
+
+
+    #about .col-md-3{
+        width: 100%;
+    }
+
 }
 
 #splashScreen .units{
