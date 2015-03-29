@@ -291,7 +291,8 @@ box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.8);
     border-bottom-right-radius: 0px;
 
     width: 300px;
-    height: 81%;
+/*    height: 81%;*/
+    height: 542px;
 
     top: 86px;
     right: 0px;
@@ -582,7 +583,8 @@ div.item.description.country{
 .panel.info-box{
     /*max-height: 302px;*/
     /*max-height: 344px;*/
-    max-height: 374px;
+/*    max-height: 374px;*/
+
 }
 
 img.icon{
@@ -794,6 +796,55 @@ p.units{
 
 .navbar-brand{
     cursor: default;
+}
+
+.navbar .compare{
+    margin-right: 1px;
+}
+
+.top-nav-collapse .compare{
+    display: none;
+}
+
+@media (max-width: 768px){
+
+    .navbar-toggle{
+        background-color: rgba(255,255,255,0.6);
+        outline: #999999 thin solid;
+        color: #999999;
+        border-radius: 0px;
+    }
+
+    .top-nav-collapse .navbar-toggle{
+        background-color: rgba(255,255,255,0.2);
+        color: #ffffff;
+        outline: none;
+    }
+
+    .navbar-nav>li:last-child{
+        margin-top: 1px;
+    }
+    .top-nav-collapse .navbar-nav>li:last-child{
+        margin-left: 0px;
+    }
+
+    .navbar .compare{
+        display: none;
+    }
+
+    #infoPanel{
+        display: none !important;
+    }
+
+    .panel.docked.bottom-left{
+        bottom: 90px;
+        z-index: 10000;
+    }
+
+    .leaflet-bottom{
+        margin-bottom: 91px;
+    }
+
 }
 
 #splashScreen .units{

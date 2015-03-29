@@ -1422,10 +1422,10 @@ $(document).ready(function() {
     /***************CompareScreen||**********************************/
 
 
-    $("div.leaflet-control-container").find(".leaflet-top.leaflet-left").prepend(function() {
+    $($("ul.navbar-nav").find("li")[0]).after(function() {
         var compareButton = new UI_Button({
             attributes: {
-                class: "trigger leaflet-control cartograph-control-button compare"
+                //class: "trigger leaflet-control cartograph-control-button compare"
             },
             content: function() {
                 return $("<div>Compare</div>");
@@ -1438,7 +1438,7 @@ $(document).ready(function() {
                 }
             }
         });
-        return compareButton;
+        return $("<li class='compare'/>").append(compareButton);
     });
 
     $("#infoPanel").on("mapLocationChange", function(e, params) {
