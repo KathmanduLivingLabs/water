@@ -1420,10 +1420,10 @@ $(document).ready(function() {
     /***************CompareScreen||**********************************/
 
 
-    $("div.leaflet-control-container").find(".leaflet-top.leaflet-left").append(function() {
+    $("div.leaflet-control-container").find(".leaflet-top.leaflet-left").prepend(function() {
         var compareButton = new UI_Button({
             attributes: {
-                class: "trigger leaflet-control cartograph-control-button"
+                class: "trigger leaflet-control cartograph-control-button compare"
             },
             content: function() {
                 return $("<div>Compare</div>");
