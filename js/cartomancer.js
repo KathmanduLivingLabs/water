@@ -608,6 +608,8 @@ $(document).ready(function() {
                                 sandglass.setContent(popupContent.getPopupContent());
                                 sandglass.setContent(new sandglass.BalloonTurn());
 
+                                if($($(sandglass.getSanGlass()).find(".title")[0]).text()==="hydrerabad")$($(sandglass.getSanGlass()).find(".title")[0]).text("hyderabad");
+
                                 $(sandglass.getSandGlass()).find(".scale-container").each(function(index){
                                     if($.inArray($(this).attr("type"),["benthic_macroinvertebrates","coliform_bacteria"])+1)return;
 									if($(this).attr("type")==="biochemical_oxygen_demand") $(this).find("h4.scale-name").text("BOD:");
@@ -1464,7 +1466,7 @@ $(document).ready(function() {
             popupContent.getConstructorState().done(function() {
 
                 sandglass.setContent(popupContent.getPopupContent());
-                $(sandglass.getSandGlass()).find("h4");
+                //$(sandglass.getSandGlass()).find("h4");
 
                 $(sandglass.getSandGlass()).find(".scale-container").each(function(index){
                                     if($.inArray($(this).attr("type"),["benthic_macroinvertebrates","coliform_bacteria"])+1)return;
