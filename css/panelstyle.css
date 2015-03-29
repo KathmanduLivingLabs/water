@@ -616,8 +616,12 @@ div.testpoint-thumbnail{
 }
 
 .not-available{
-    background: #999999 !important;
-    color: #ff0000;
+    background: transparent !important;
+    color: #999999;
+    font-weight: 600;
+}
+.not-available div{
+    margin-left: 2px;
 }
 
 .count_schools{
