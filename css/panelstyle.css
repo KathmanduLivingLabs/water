@@ -792,6 +792,10 @@ p.units{
     cursor: default;
 }
 
+#splashScreen .units{
+    display:none;
+}
+
 
 body{
     overflow-y: auto;
