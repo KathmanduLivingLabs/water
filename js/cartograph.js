@@ -642,7 +642,7 @@ function InfoStylingRules() {
             gradientColors: ["#ff6464", ["#ffffb4", "good-min"], "#c8ffc8", ["#ffffb4", "good-max"], "#ff6464"]
         },
         dissolved_oxygen: {
-            intro: "Dissolved Oxygen is a measure of how much oxygen is dissolved in water.it is a key indicator of water quality.",
+            intro: "DO, or Dissolved Oxygen, is a measure of how much oxygen is dissolved in water.",
             gradientColors: ["#ff6464", ["#ffffb4", "good-min"], "#ffffb4", "#c8ffc8"]
         },
         temperature: {
@@ -654,7 +654,7 @@ function InfoStylingRules() {
             gradientColors: ["#c8ffc8", ["#c8ffc8", "good-max"], "#ffffb4 0.1%", "#ff6464"]
         },
         biochemical_oxygen_demand: {
-            intro: "BOD, or Biochemical Oxygen Demand is used as a measure of the degree of water pollution. BOD is the amount of oxygen required by aerobic micro-organisms to decompose the organic matter in a sample of water, such as that polluted by sewage.",
+            intro: "BOD, or Biochemical Oxygen Demand, is used as a measure of the degree of water pollution. BOD is the amount of oxygen required by aerobic micro-organisms to decompose the organic matter in a sample of water, such as that polluted by sewage.",
             gradientColors: ["#c8ffc8", ["#ffffb4", "good-min"], ["#ffffb4", "good-max"], "#ff6464"]
         },
         nitrate: {
