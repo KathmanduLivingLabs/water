@@ -519,17 +519,32 @@ panel .trigger.close .icon{
     box-shadow: 0px 1px 5px rgba(0,0,0,0.65);
     border-radius: 4px;
     cursor: pointer;
+    font-family: "Montserrat",sans-serif;
     font-size: 10pt;
     //line-height:0px;
     padding:4px;
 
     border: #999999 thin solid;
     border-radius: 0px;
-    background-color: rgba(255,255,255,0.88);
+    background-color: rgba(255,255,255,0.6);
     box-shadow: 0px 0px 6px rgba(0,0,0,0.4);
 }
 .cartograph-control-button:hover{
     background-color: #f4f4f4;
+}
+
+.cartograph-control-button.compare{
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.leaflet-bar a{
+    background-color: rgba(255,255,255,0.6);
+}
+.leaflet-bar a.leaflet-disabled{
+    background-color: rgba(255,255,255,0.3);
 }
 
 
@@ -644,8 +659,9 @@ p.units{
 .leaflet-bar{
     border-radius: 0px;
     border: #999999 thin solid;
-    background-color: rgba(255,255,255,0.88);
+/*    background-color: rgba(255,255,255,0.88);*/
     box-shadow: 0px 0px 6px rgba(0,0,0,0.4);
+    background-color: transparent;
 }
 
 
@@ -729,6 +745,10 @@ p.units{
     outline: none;
     box-shadow: none;
 }
+.top-nav-collapse .navbar-brand p.sub-title{
+    color: #ffffff;
+}
+
 .top-nav-collapse .nav.navbar-nav{
     background-color: transparent;
     outline: none;
@@ -754,6 +774,22 @@ p.units{
 }
 .navbar .navbar-header, .navbar .navbar-nav{
     pointer-events: all;
+}
+
+.navbar-brand p.sub-title{
+    font-size: 12px;
+    font-weight: 400;
+    color: #000000;
+    margin-top: -48px;
+    margin-left: 12px;
+    padding-right: 2px;
+}
+.navbar-brand h1{
+    padding-bottom: 4px;
+}
+
+.navbar-brand{
+    cursor: default;
 }
 
 
