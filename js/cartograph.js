@@ -598,7 +598,7 @@ function Sand(promise, replacement) {
  **/
 
 function InfoStylingRules() {
-    var infoStylingRules = {
+    /*var infoStylingRules = {
         ph: {
             intro: "pH is the scale used to measure the acidity of water.",
             gradientColors: ["#f00", ["#ff0", "good-min"], "#0f0", ["#ff0", "good-max"], "#f00"]
@@ -626,6 +626,43 @@ function InfoStylingRules() {
         phosphate: {
             intro: "Phosphorus is essential for plant growth and metabolic reactions in animals and plants.",
             gradientColors: ["#f00", ["#0f0", "good-min"], ["#ff0", "good-max"], "#f00"]
+        },
+        benthic_macroinvertebrates: {
+            intro: "Benthic macroinvertebrates are animals without backbones, that are visible with the naked eye, living on the bottoms of streams, river, lakes, and ponds."
+        },
+        coliform_bacteria: {
+            intro: "Coliform Bacteria are rod-shaped bacteria found in the intestinal tract of humans and other animals. Its presence in water indicates fecal contamination and can cause diarrhea and other dysenteric symptoms."
+        }
+    };*/
+
+    var infoStylingRules = {
+        ph: {
+            intro: "pH is the scale used to measure the acidity of water.",
+            gradientColors: ["#ff6464", ["#ffffb4", "good-min"], "#c8ffc8", ["#ffffb4", "good-max"], "#ff6464"]
+        },
+        dissolved_oxygen: {
+            intro: "Dissolved Oxygen is a measure of how much oxygen is dissolved in water.it is a key indicator of water quality.",
+            gradientColors: ["#ff6464", ["#ffffb4", "good-min"], "#ffffb4", "#c8ffc8"]
+        },
+        temperature: {
+            intro: "Arsenic is a naturally occuring element in the Earth's crust.",
+            gradientColors: ["#c8ffc8", ["#ffffb4", "good-min"], ["#ffffb4", "good-max"], "#ff6464"]
+        },
+        turbidity: {
+            intro: "Turbidity is a measure of the water’s lack of clarity.",
+            gradientColors: ["#c8ffc8", ["#c8ffc8", "good-max"], "#ffffb4 0.1%", "#ff6464"]
+        },
+        biochemical_oxygen_demand: {
+            intro: "BOD, or Biochemical Oxygen Demand is used as a measure of the degree of water pollution. BOD is the amount of oxygen required by aerobic micro-organisms to decompose the organic matter in a sample of water, such as that polluted by sewage.",
+            gradientColors: ["#c8ffc8", ["#ffffb4", "good-min"], ["#ffffb4", "good-max"], "#ff6464"]
+        },
+        nitrate: {
+            intro: "Nitrate is an essential nutrient for aquatic plants and animals and is the form in which plants utilise nitrogen.",
+            gradientColors: ["#c8ffc8", ["#ffffb4", "good-min"], ["#ffffb4", "good-max"], "#ff6464"]
+        },
+        phosphate: {
+            intro: "Phosphorus is essential for plant growth and metabolic reactions in animals and plants.",
+            gradientColors: ["#c8ffc8", ["#ffffb4", "good-min"], ["#ffffb4", "good-max"], "#ff6464"]
         },
         benthic_macroinvertebrates: {
             intro: "Benthic macroinvertebrates are animals without backbones, that are visible with the naked eye, living on the bottoms of streams, river, lakes, and ponds."
