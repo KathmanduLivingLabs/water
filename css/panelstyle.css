@@ -853,8 +853,10 @@ p.units{
 
 }
 
-@media (max-width: 1280px){
-
+@media (min-height: 700px){
+    #map{
+        height: 720px !important;
+    }
 }
 
 .photo-container{

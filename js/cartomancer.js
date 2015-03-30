@@ -25,7 +25,7 @@ $(document).ready(function() {
 
     map.init();
     //setting map pan limit
-    map.getMap().setMaxBounds(map.getMap().getBounds());
+    map.getMap().setMaxBounds(map.getMap().getBounds().pad(0.05));
 
 //    map.getMap().on("movestart", function(){
 //
