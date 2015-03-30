@@ -651,7 +651,8 @@ p.units{
 
 
 .leaflet-top{
-    top: 90px;
+/*    top: 90px;*/
+    top: 96px;
 }
 
 .bottom-left{
@@ -787,15 +788,17 @@ p.units{
 }
 
 .navbar-brand p.sub-title{
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 10px;
+    font-weight: 600;
     color: #000000;
-    margin-top: -48px;
+    margin-top: -50px;
     margin-left: 12px;
-    padding-right: 2px;
+/*    padding-right: 2px;*/
+    padding-right: 4px;
+    text-transform: uppercase;
 }
 .navbar-brand h1{
-    padding-bottom: 4px;
+    padding-bottom: 10px;
 }
 
 .navbar-brand{
@@ -854,6 +857,18 @@ p.units{
     #about .col-md-3{
         width: 100%;
     }
+
+    #about .col-md-3>div{
+        display: inline-block;
+        width: 49.4%;
+    }
+
+    #about .about-text.col-md-3>div{
+        display: block;
+        width: 100%;
+    }
+
+
 
 }
 
