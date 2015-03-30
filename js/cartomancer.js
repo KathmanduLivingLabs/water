@@ -1,7 +1,7 @@
 $(document).ready(function() {
-    $("#map").css({
-        height: $(document).innerHeight() - 20
-    });
+    /*$("#map").css({
+        height: $(document).innerHeight()
+    });*/
     configInit();
     var cartomancer = {promise: {summaryTable: []}};
     var map = new Map();
@@ -24,8 +24,9 @@ $(document).ready(function() {
     var modelQueryDeferred = $.Deferred();
 
     map.init();
+
     //setting map pan limit
-    map.getMap().setMaxBounds(map.getMap().getBounds());
+    map.getMap().setMaxBounds(map.getMap().getBounds().pad(0.05));
 
 //    map.getMap().on("movestart", function(){
 //
@@ -1422,10 +1423,10 @@ $(document).ready(function() {
     /***************CompareScreen||**********************************/
 
 
-    $("div.leaflet-control-container").find(".leaflet-top.leaflet-left").prepend(function() {
+    $($("ul.navbar-nav").find("li")[0]).after(function() {
         var compareButton = new UI_Button({
             attributes: {
-                class: "trigger leaflet-control cartograph-control-button compare"
+                //class: "trigger leaflet-control cartograph-control-button compare"
             },
             content: function() {
                 return $("<div>Compare</div>");
@@ -1438,7 +1439,7 @@ $(document).ready(function() {
                 }
             }
         });
-        return compareButton;
+        return $("<li class='compare'/>").append(compareButton);
     });
 
     $("#infoPanel").on("mapLocationChange", function(e, params) {
@@ -1525,6 +1526,10 @@ $(document).ready(function() {
             $(this).addClass("disabled");
         }
 
+    });
+
+    $("ul.navbar-nav li").click(function(e){
+        $("button.navbar-toggle").click();
     });
 
 });

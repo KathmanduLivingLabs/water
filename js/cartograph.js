@@ -642,7 +642,7 @@ function InfoStylingRules() {
             gradientColors: ["#ff6464", ["#ffffb4", "good-min"], "#c8ffc8", ["#ffffb4", "good-max"], "#ff6464"]
         },
         dissolved_oxygen: {
-            intro: "Dissolved Oxygen is a measure of how much oxygen is dissolved in water.it is a key indicator of water quality.",
+            intro: "DO, or Dissolved Oxygen, is a measure of how much oxygen is dissolved in water.",
             gradientColors: ["#ff6464", ["#ffffb4", "good-min"], "#ffffb4", "#c8ffc8"]
         },
         temperature: {
@@ -654,7 +654,7 @@ function InfoStylingRules() {
             gradientColors: ["#c8ffc8", ["#c8ffc8", "good-max"], "#ffffb4 0.1%", "#ff6464"]
         },
         biochemical_oxygen_demand: {
-            intro: "BOD, or Biochemical Oxygen Demand is used as a measure of the degree of water pollution. BOD is the amount of oxygen required by aerobic micro-organisms to decompose the organic matter in a sample of water, such as that polluted by sewage.",
+            intro: "BOD, or Biochemical Oxygen Demand, is used as a measure of the degree of water pollution. BOD is the amount of oxygen required by aerobic micro-organisms to decompose the organic matter in a sample of water, such as that polluted by sewage.",
             gradientColors: ["#c8ffc8", ["#ffffb4", "good-min"], ["#ffffb4", "good-max"], "#ff6464"]
         },
         nitrate: {
@@ -1320,14 +1320,23 @@ function PopupContent(paramsTable, waterParams, paramsTableRows, onePage) {
                         .append(function() {
                             var elementHTML;
                             if (key === "photo") {
-                                elementHTML = $("<a><div class='testpoint-thumbnail' style='background-image: url(https://ona.io/attachment/medium?media_file=ktmlabs/attachments/" + paramsTable[key] + ");'></div></a>")/*.prepend(
+                                var photoURL = "https://ona.io/attachment/large?media_file=ktmlabs/attachments/" + paramsTable[key];
+                                elementHTML = $("<a><div class='testpoint-thumbnail' style='background-image: url(https://ona.io/attachment/medium?media_file=ktmlabs/attachments/" + paramsTable[key] + ");'></div></a>").on("click", function(e){
+                                    $("<div class='photo-container panel'/>").append(function(){
+                                        return $("<img/>").attr({
+                                            src: photoURL
+                                        });
+                                    }).append(new CloseButton()).insertBefore("#splashScreen");
+                                });
+
+                                /*.prepend(
                                  new UI_TimedContent({
                                  content: [
                                  "Image not Available"
                                  //,"Image not Available"
                                  ],
                                  timer: 5000
-                                 }))*/;
+                                 }))*/
                             } else if (key === "country") {
                                 elementHTML = "<a class='title'>" + paramsTable[key] + "</a>";
                             }
