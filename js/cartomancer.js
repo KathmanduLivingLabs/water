@@ -1529,7 +1529,9 @@ $(document).ready(function() {
     });
 
     $("ul.navbar-nav li").click(function(e){
-        $("button.navbar-toggle").click();
+
+        if($(window).innerWidth() <= 768)
+            $("button.navbar-toggle").click();
     });
 
 });
