@@ -312,6 +312,10 @@ box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.8);
     max-width:240px;
 }
 
+.panel.docked.bottom-left .info-container{
+    width: 220px;
+}
+
 .panel>.info.contents, #infoPanel>.info-container{
     margin:10px;
 }
@@ -856,6 +860,12 @@ p.units{
 @media (min-height: 700px){
     #map{
         height: 720px !important;
+    }
+}
+
+@media (min-height: 680px){
+    #map{
+        height: 694px !important;
     }
 }
 

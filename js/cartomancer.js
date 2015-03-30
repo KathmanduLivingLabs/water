@@ -24,6 +24,7 @@ $(document).ready(function() {
     var modelQueryDeferred = $.Deferred();
 
     map.init();
+
     //setting map pan limit
     map.getMap().setMaxBounds(map.getMap().getBounds().pad(0.05));
 
