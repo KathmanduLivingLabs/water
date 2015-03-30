@@ -1320,14 +1320,23 @@ function PopupContent(paramsTable, waterParams, paramsTableRows, onePage) {
                         .append(function() {
                             var elementHTML;
                             if (key === "photo") {
-                                elementHTML = $("<a><div class='testpoint-thumbnail' style='background-image: url(https://ona.io/attachment/medium?media_file=ktmlabs/attachments/" + paramsTable[key] + ");'></div></a>")/*.prepend(
+                                var photoURL = "https://ona.io/attachment/large?media_file=ktmlabs/attachments/" + paramsTable[key];
+                                elementHTML = $("<a><div class='testpoint-thumbnail' style='background-image: url(https://ona.io/attachment/medium?media_file=ktmlabs/attachments/" + paramsTable[key] + ");'></div></a>").on("click", function(e){
+                                    $("<div class='photo-container panel'/>").append(function(){
+                                        return $("<img/>").attr({
+                                            src: photoURL
+                                        });
+                                    }).append(new CloseButton()).insertBefore("#splashScreen");
+                                });
+
+                                /*.prepend(
                                  new UI_TimedContent({
                                  content: [
                                  "Image not Available"
                                  //,"Image not Available"
                                  ],
                                  timer: 5000
-                                 }))*/;
+                                 }))*/
                             } else if (key === "country") {
                                 elementHTML = "<a class='title'>" + paramsTable[key] + "</a>";
                             }

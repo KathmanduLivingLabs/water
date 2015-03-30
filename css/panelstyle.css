@@ -853,6 +853,23 @@ p.units{
 
 }
 
+@media (max-width: 1280px){
+
+}
+
+.photo-container{
+    position: absolute;
+
+    top: 100px;
+    left: 50%;
+    margin-left: -360px;
+}
+.photo-container img{
+    width: 640px;
+    height: 480px;
+    margin: 22px 28px;
+}
+
 #splashScreen .units{
     display:none;
 }

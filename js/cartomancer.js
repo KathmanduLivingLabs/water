@@ -1,7 +1,7 @@
 $(document).ready(function() {
-    $("#map").css({
-        height: $(document).innerHeight() - 20
-    });
+    /*$("#map").css({
+        height: $(document).innerHeight()
+    });*/
     configInit();
     var cartomancer = {promise: {summaryTable: []}};
     var map = new Map();
