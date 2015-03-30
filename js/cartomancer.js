@@ -1528,5 +1528,9 @@ $(document).ready(function() {
 
     });
 
+    $("ul.navbar-nav li").click(function(e){
+        $("button.navbar-toggle").click();
+    });
+
 });
 
