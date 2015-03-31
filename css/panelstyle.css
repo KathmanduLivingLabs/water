@@ -116,7 +116,9 @@ body *{
 }
 
 .compare .scale{
-    width:310px;
+/*    width:310px;*/
+    width: 410px;
+    display: inline-block;
 }
 
 
@@ -214,16 +216,20 @@ a.disabled{
     /*margin-top:10px;*/
     line-height:0pt;
     text-transform: capitalize;
-    margin-bottom: 6pt;
+/*    margin-bottom: 6pt;*/
+    margin-bottom: 12px;
+/*
     -webkit-transform: translate(300px, 18px);
     transform: translate(300px, 18px);
     text-align: center;
+*/
+    text-align: left;
 }
 .compare.b .sandglass .item:not(.persistent) h4{
-    color: transparent;
+/*    color: transparent;*/
 }
 .compare.b .sandglass h4{
-    text-align: right;
+/*    text-align: right;*/
 }
 .compare .sandglass h4{
     margin-bottom:0pt;
@@ -416,7 +422,10 @@ panel .trigger.close .icon{
     float:left;
 }*/
 #splashScreen .compare.b .sandglass-container .item{
-    float:right;
+/*    float:right;*/
+}
+#splashScreen .compare.b{
+    margin-right: 20px;
 }
 
 #splashScreen .compare.seperator.column{
@@ -427,6 +436,13 @@ panel .trigger.close .icon{
     width:200px;
     height:20px;
 }
+
+#splashScreen{
+    width: 964px;
+    min-height: 559px;
+    max-height: 564px;
+}
+
 /*#splashScreen .compare.a select{
     margin-left:10px;
 }
@@ -904,7 +920,7 @@ p.units{
 }
 
 #splashScreen .units{
-    display:none;
+/*    display:none;*/
 }
 
 

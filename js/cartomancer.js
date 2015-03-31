@@ -18,6 +18,8 @@ $(document).ready(function() {
     var hoverSettings = new HoverSettings();
     var clickSettings = new ClickSettings();
 
+    var currentCountryName = "";
+
 
     cartomancerGlobals = {mouseWheel: false, map: map, mapData: mapData, loadScreen: loadScreen, persistentLayerIDs: persistentLayerIDs};
 
@@ -46,6 +48,7 @@ $(document).ready(function() {
 
             var country = "";
 
+
             try {
                 //var cPip;
                 //if(cartomancerGlobals.mouseWheel)
@@ -53,6 +56,9 @@ $(document).ready(function() {
                 //else
                 var cPip = leafletPip.pointInLayer(this.getCenter(), this._layers[persistentLayerIDs.countries], true);
                 country = cPip[0].feature.properties.country;
+
+                //currentCountryName = country;
+
                 $("#infoPanel").show(200, function() {
                     $(this).removeClass("hidden");
 
@@ -103,6 +109,7 @@ $(document).ready(function() {
                     if (cPip.length) {
                         city = cPip[0].feature.properties.city;
                         country = cPip[0].feature.properties.country;
+                        currentCountryName = country;
                         break;
                     }
                 }
@@ -125,8 +132,7 @@ $(document).ready(function() {
                 }
             }
 
-            if (!$("#infoPanel").find("a.title").length)
-                $("<a class='title'></a>").insertAfter($("#infoPanel").find("h3"));
+
 
             $("#infoPanel").children("h3").excecuteOnEach(function() {
                 if ($(this).text() === city)
@@ -134,9 +140,16 @@ $(document).ready(function() {
                 var element = this;
 
                 setTimeout(function() {
-                    $(element).text(city);
-                    $(element).parent().find("a.title").text(country.replace(/_/g, " "));
+
                     if (city) {
+
+                        if (!$("#infoPanel").find("a.title").length)
+                $("<a class='title'></a>").insertAfter($("#infoPanel").find("h3"));
+
+                        $(element).text(city);
+                    $(element).parent().find("a.title").text(country.replace(/_/g, " "));
+
+                        currentCountryName = "";
 
                         $(element).trigger("mapLocationChange", {
                             function: "getSummary",
@@ -146,13 +159,34 @@ $(document).ready(function() {
                             , requestType: "GET"
                         });
                     } else {
-                        $(element).trigger("mapLocationChange", {
-                            function: "getSummary",
-                            type: "country",
-                            country: country,
-                            city: "all"
-                            , requestType: "GET"
-                        });
+
+
+
+                        if (currentCountryName !== country){
+
+                            $(element).text(country);
+                    $(element).parent().find("a.title").remove();
+
+                            currentCountryName = country;
+                            //$("#infoPanel").find("a.title").remove();
+
+            $("#infoPanel").children("h3").excecuteOnEach(function() {
+                if ($(this).text() === country.replace(/_/g," "))
+                    return;
+                var element = this;
+                setTimeout(function() {
+                    $(element).text(country.replace(/_/g," "));
+
+                    $(element).trigger("mapLocationChange", {
+                        function: "getSummary",
+                        type: "country",
+                        country: country,
+                        city: "all"
+                        , requestType: "GET"
+                    });
+                }, 0);
+            });
+                        }
                     }
                 }, 0);
             });
@@ -609,7 +643,7 @@ $(document).ready(function() {
                                 sandglass.setContent(popupContent.getPopupContent());
                                 sandglass.setContent(new sandglass.BalloonTurn());
 
-                                if($($(sandglass.getSanGlass()).find(".title")[0]).text()==="hydrerabad")$($(sandglass.getSanGlass()).find(".title")[0]).text("hyderabad");
+                                if($($(sandglass.getSandGlass()).find(".title")[0]).text()==="hydrerabad")$($(sandglass.getSandGlass()).find(".title")[0]).text("hyderabad");
 
                                 $(sandglass.getSandGlass()).find(".scale-container").each(function(index){
                                     if($.inArray($(this).attr("type"),["benthic_macroinvertebrates","coliform_bacteria"])+1)return;
@@ -1456,7 +1490,12 @@ $(document).ready(function() {
 
         sandglass.setContent(sand.getSand());
         //clickSettings.featureClicked(e, sandglass.getSandGlass());
+
+//        var sandGlassContents = sandglass.getSandGlass();
+
+
         $("#infoPanel").find(".info-container").html(sandglass.getSandGlass());
+
 
         summaryQuery.done(function(summaryTable, params) {
             var popupContent = new PopupContent(summaryTable, waterParams, new ParameterLabels().getParameterLabels(params), true);
@@ -1465,6 +1504,9 @@ $(document).ready(function() {
             sand.setDeferred(popupContent.getConstructorState());
 
             popupContent.getConstructorState().done(function() {
+
+                if($($(sandglass.getSandGlass()).find(".title")[0]).text()==="hydrerabad")$($("#infoPanel").find(".title")[0]).text("hyderabad");
+
 
                 sandglass.setContent(popupContent.getPopupContent());
                 //$(sandglass.getSandGlass()).find("h4");
