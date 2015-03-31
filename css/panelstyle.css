@@ -122,7 +122,7 @@ body *{
 }
 
 
-[good-min] .scale{
+/*[good-min] .scale{
     background: linear-gradient(to right, red, greenyellow);
 }
 [good-max] .scale{
@@ -130,7 +130,7 @@ body *{
 }
 [good-min][good-max] .scale{
     background: linear-gradient(to right, red, greenyellow, red);
-}
+}*/
 
 .scale .pointer.agg{
     position:absolute;
