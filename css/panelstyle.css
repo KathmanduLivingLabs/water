@@ -923,6 +923,21 @@ p.units{
 /*    display:none;*/
 }
 
+.frozen{
+    pointer-events: none;
+}
+.timer-freezescreen{
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    margin-left: -109px;
+/*    background-color: rgba(255,255,255,0.8);*/
+    text-align: center;
+    font-weight: 400;
+/*    width: 100%;*/
+/*    height: 100%;*/
+}
+
 
 body{
     overflow-y: auto;

@@ -2,6 +2,7 @@ $(document).ready(function() {
     /*$("#map").css({
         height: $(document).innerHeight()
     });*/
+    $("#map").addClass("frozen");
     configInit();
     var cartomancer = {promise: {summaryTable: []}};
     var map = new Map();
@@ -1073,6 +1074,9 @@ $(document).ready(function() {
 //        console.log(params);
 
         loadScreen.showLoadingAnim(false);
+
+        $(".timer-freezescreen").remove();
+        $("#map").removeClass("frozen");
 
 
         modelQuery = mapData.fetchMapFeatures(params);
