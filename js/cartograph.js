@@ -749,7 +749,7 @@ function VisualizationFunctions() {
                             return scaleSize * paramsTable[scale] / scaleRange;
                         }
                     };
-                }) : function(context){ 	$(context).addClass("not-available"); 	return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
+                }) : function(context){ 	$(context).addClass("not-available");  return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
             });
 
             $(this).cssByFunction(function() {
@@ -807,7 +807,7 @@ function VisualizationFunctions() {
                             return scaleSize * paramsTable[scale] / scaleRange;
                         }
                     };
-                }) : function(context){ 	$(context).addClass("not-available"); 	return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
+                }) : function(context){ 	$(context).addClass("not-available"); $(context).parent().addClass("no-data"); 	return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
             });
 
             $(this).cssByFunction(function() {
@@ -867,7 +867,7 @@ function VisualizationFunctions() {
                             return scaleSize * paramsTable[scale] / scaleRange;
                         }
                     };
-                }) : function(context){ 	$(context).addClass("not-available"); 	return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
+                }) : function(context){ 	$(context).addClass("not-available"); $(context).parent().addClass("no-data");	return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
             });
 
             $(this).cssByFunction(function() {
@@ -925,7 +925,7 @@ function VisualizationFunctions() {
                             return scaleSize * paramsTable[scale] / scaleRange;
                         }
                     };
-                }) : function(context){ 	$(context).addClass("not-available"); 	return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
+                }) : function(context){ 	$(context).addClass("not-available"); $(context).parent().addClass("no-data"); 	return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
             });
 
             $(this).cssByFunction(function() {
@@ -982,7 +982,7 @@ function VisualizationFunctions() {
                             return scaleSize * paramsTable[scale] / scaleRange;
                         }
                     };
-                }) : function(context){ 	$(context).addClass("not-available"); 	return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
+                }) : function(context){ 	$(context).addClass("not-available"); $(context).parent().addClass("no-data");	return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
             });
 
             $(this).cssByFunction(function() {
@@ -1041,7 +1041,7 @@ function VisualizationFunctions() {
                             return scaleSize * paramsTable[scale] / scaleRange;
                         }
                     };
-                }) : function(context){ 	$(context).addClass("not-available"); 	return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
+                }) : function(context){ 	$(context).addClass("not-available"); $(context).parent().addClass("no-data"); 	return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
             });
 
             $(this).cssByFunction(function() {
@@ -1117,7 +1117,7 @@ function VisualizationFunctions() {
                             return scaleSize * paramsTable[scale] / scaleRange;
                         }
                     };
-                }) : function(context){ 	$(context).addClass("not-available"); 	return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
+                }) : function(context){ 	$(context).addClass("not-available"); $(context).parent().addClass("no-data"); 	return $("<div class='msg reading-erroneous'>Not Available</div>"); }(this);
             });
 
             $(this).cssByFunction(function() {

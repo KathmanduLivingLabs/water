@@ -652,6 +652,11 @@ div.testpoint-thumbnail{
     margin-left: 2px;
 }
 
+.no-data .units{
+    display: none;
+}
+
+
 .count_schools{
     display: none;
 }
@@ -669,8 +674,14 @@ p.units{
     /*font-size: 8pt;*/
     margin: 0px;
     line-height: 0px;
+    font-weight: 400;
+    color: #7a7a7a;
 }
 
+.frequency-scale{
+    font-weight: 400;
+    color: #7a7a7a;
+}
 
 .leaflet-top{
 /*    top: 90px;*/
