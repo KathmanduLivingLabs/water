@@ -1,0 +1,24 @@
+.MSIE10 .info-container{
+    margin-top: -12px;
+}
+
+.MSIE10 .intro .slogan h4{
+    color: #000000;
+}
+
+.MSIE10 .intro .slogan{
+    text-align: left;
+}
+
+.MSIE10 .info-box *, a, h4, p{
+    text-shadow: 0px 0px 0px rgba(255,255,255,0) !important;
+}
+
+.MSIE10 p.units{
+    font-weight: 400;
+    letter-spacing: 0.001em;
+}
+
+.MSIE10 .scale-container *{
+    letter-spacing: 0.001em;
+}

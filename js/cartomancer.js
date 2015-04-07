@@ -2,6 +2,7 @@ $(document).ready(function() {
     /*$("#map").css({
         height: $(document).innerHeight()
     });*/
+    if(navigator.userAgent.indexOf("MSIE 10")+1)$("body").addClass("MSIE10");
     $("#map").addClass("frozen");
     configInit();
     var cartomancer = {promise: {summaryTable: []}};
